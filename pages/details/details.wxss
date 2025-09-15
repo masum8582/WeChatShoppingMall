@@ -1,0 +1,243 @@
+/* ===== CONTAINER — subtle background polish ===== */
+.details-container {
+  padding: 2rpx 1rpx;
+  background: #fff;
+  border-radius: 22rpx;
+  box-shadow: 0 10rpx 40rpx rgba(0, 0, 0, 0.05);
+  animation: containerGlow 0.9s ease-out forwards;
+}
+
+@keyframes containerGlow {
+  from {
+    opacity: 0;
+    transform: translateY(40rpx);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 10rpx 40rpx rgba(0, 0, 0, 0.05);
+  }
+}
+
+
+/* ===== IMAGE — 3D FLOAT + HOVER LIFT ===== */
+.detail-image {
+  width: 100%;
+  height: 750rpx;
+  border: 11rpx solid #484915;
+  border-radius: 24rpx; /* Softer, more modern */
+  object-fit: cover;
+  overflow: hidden;
+  margin-top: 10rpx;
+  will-change: transform, box-shadow;
+  transform: perspective(1200rpx) rotateX(0) rotateY(0) scale(1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.6s ease;
+  animation: floatGently 8s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+@keyframes floatGently {
+  0%, 100% {
+    transform: perspective(1200rpx) rotateX(-3deg) rotateY(-3deg) scale(1.01);
+  }
+  50% {
+    transform: perspective(1200rpx) rotateX(3deg) rotateY(3deg) scale(1.03);
+  }
+}
+
+.detail-image:hover {
+  transform: perspective(1200rpx) rotateX(8deg) rotateY(10deg) scale(1.08);
+  box-shadow: 0 40rpx 80rpx rgba(0, 0, 0, 0.25),
+              inset 0 0 0 2rpx rgba(255,255,255,0.1);
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* ===== INFO SECTION — STAGGERED FADE-IN ===== */
+.detail-info {
+  padding: 30rpx 0 0;
+  opacity: 0;
+  transform: translateY(20rpx);
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===== TITLE — SLIGHT HOVER INTERACTION ===== */
+.detail-title {
+  font-size: 34rpx; /* Fixed typo: was 3rpx */
+  font-weight: 600;
+  display: block;
+  margin-bottom: 24rpx;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+  letter-spacing: -0.5rpx;
+}
+
+.detail-title:hover {
+  color: #e60000;
+  transform: translateX(4rpx);
+}
+
+
+/* ===== PRICE + DISCOUNT — ATTENTION MAGNET ===== */
+.detail-price {
+  font-size: 42rpx;
+  color: #e60000;
+  font-weight: 800;
+  margin-bottom: 10rpx;
+  display: inline-block;
+  align-items: center;
+  gap: 16rpx;
+  opacity: 0;
+  animation: fadeInRight 0.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.original-price {
+  font-size: 26rpx;
+  color: #888;
+  text-decoration: line-through;
+}
+
+.discount-tag {
+  font-size: 24rpx;
+  color: #f40;
+  background: rgba(255, 69, 0, 0.12);
+  padding: 4rpx 14rpx;
+  border-radius: 20rpx;
+  font-weight: 550;
+  animation: pulseHighlight 1.8s ease-in-out infinite;
+  animation-delay: 0.7s;
+}
+
+@keyframes pulseHighlight {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); background-color: rgba(255, 69, 0, 0.2); }
+}
+
+
+/* ===== RATING — HOVER SLIDE ===== */
+.rating-section {
+  margin: 26rpx 0;
+  display: flex;
+  align-items: center;
+  gap: 6rpx;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-delay: 0.8s;
+  margin:2rpx;
+}
+
+.rating-section:hover {
+  transform: translateX(6rpx);
+  transition: transform 0.3s ease;
+}
+
+.stars {
+  color: #ffb700;
+  font-size: 36rpx;
+  letter-spacing: 4rpx;
+  margin:2rpx;
+}
+
+.review-count {
+  color: #999;
+  font-size: 28rpx;
+  margin:2rpx;
+}
+
+
+/* ===== DESCRIPTION — TYPEWRITER-LIKE REVEAL ===== */
+.description {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.7;
+  margin: 2rpx;
+  opacity: 0;
+  animation: slideInText 0.8s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes slideInText {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ===== BUTTONS — TACTILE HOVER + PRESS ===== */
+.add-to-cart-btn,
+.buy-now-btn {
+  margin-top: 36rpx;
+  padding: 0 32rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  letter-spacing: 0.5rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(20rpx);
+}
+
+.add-to-cart-btn {
+  background: #f0c948;
+  color: #000;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.add-to-cart-btn:hover {
+  background: #e6b82d;
+  transform: translateY(-4rpx);
+  box-shadow: 0 8rpx 25rpx rgba(0, 0, 0, 0.18);
+}
+
+.add-to-cart-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.12);
+}
+
+.buy-now-btn {
+  background: #e60000;
+  color: #fff;
+  margin-top: 20rpx;
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+.buy-now-btn:hover {
+  background: #cc0000;
+  transform: translateY(-4rpx);
+  box-shadow: 0 10rpx 30rpx rgba(0, 0, 0, 0.25);
+}
+
+.buy-now-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.18);
+}

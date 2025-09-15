@@ -1,0 +1,35 @@
+<view class="container">
+  <!-- Product Info -->
+  <view class="product-info">
+    <image class="product-image" src="../../images/product.jpg" mode="aspectFill"/>
+    <view class="product-details">
+      <text class="product-name">Elegant Ladies Handbag</text>
+      <text class="product-price">¥356.00</text>
+    </view>
+  </view>
+
+  <!-- Payment Amount -->
+  <view class="amount-section">
+    <text class="label">Total Amount:</text>
+    <text class="amount">¥356.00</text>
+  </view>
+
+  <!-- Payment Method -->
+  <view class="payment-method-section">
+    <text class="label">Select Payment Method:</text>
+    <radio-group class="payment-options" bindchange="onPaymentChange">
+      <label class="radio-option">
+        <radio value="wechat" checked /> WeChat Pay
+      </label>
+      <label class="radio-option">
+        <radio value="alipay" /> Alipay
+      </label>
+      <label class="radio-option">
+        <radio value="card" /> Bank Card
+      </label>
+    </radio-group>
+  </view>
+
+  <!-- Pay Button -->
+  <button class="pay-button" bindtap="payNow">Pay Now</button>
+</view>

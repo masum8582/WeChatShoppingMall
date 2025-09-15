@@ -1,0 +1,21 @@
+<view class="details-container">
+  <image src="{{product.image}}" mode="aspectFill" class="detail-image" />
+  <view class="detail-info">
+    <text class="detail-title">{{product.title}}</text>
+    <text class="detail-price">{{product.price}}</text>
+    <text class="original-price">{{product.originalPrice}}</text>
+    <text class="discount-tag">{{product.discount}}</text>
+
+    <view class="rating-section">
+      <text class="stars">{{product.stars}}</text>
+      <text class="review-count">({{product.reviewCount}})</text>
+    </view>
+
+    <text class="description">
+      {{product.description}}
+    </text>
+
+    <button class="add-to-cart-btn" bindtap="addToCart">Add to Cart</button>
+    <button class="buy-now-btn" bindtap="buyNow">Buy Now</button>
+  </view>
+</view>

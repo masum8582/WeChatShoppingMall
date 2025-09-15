@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/Categories/Categories",
+    "pages/cartpage/cartpage",
+    "pages/profilepage/profilepage",
+    "pages/details/details",
+    "pages/checkout/checkout",
+    "pages/cart/cart"
+  ]
+}

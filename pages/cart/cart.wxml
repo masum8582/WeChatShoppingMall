@@ -1,0 +1,48 @@
+<view class="cart-container">
+  <!-- Header -->
+  <view class="cart-header glass-header">
+    <text class="header-sub">🛒 Review your items before checkout</text>
+  </view>
+
+  <!-- If Cart has items -->
+  <block wx:if="{{cartItems.length > 0}}">
+    <block wx:for="{{cartItems}}" wx:key="id">
+      <view class="cart-item hover-lift">
+        <image class="item-image" src="{{item.image}}" mode="aspectFill"></image>
+        <view class="item-details">
+          <text class="item-title">{{item.title}}</text>
+
+          <view class="price-row">
+            <text class="item-price">¥ {{item.price}}</text>
+            <button class="remove-btn" bindtap="removeItem" data-id="{{item.id}}">Remove</button>
+          </view>
+
+          <view class="quantity-control">
+            <button bindtap="decreaseQuantity" data-id="{{item.id}}">−</button>
+            <text>{{item.quantity}}</text>
+            <button bindtap="increaseQuantity" data-id="{{item.id}}">＋</button>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <!-- Footer -->
+    <view class="cart-footer glass-footer">
+      <view class="total-box">
+        <text class="total-label">Total</text>
+        <text class="total-value">¥ {{totalPrice}}</text>
+      </view>
+      <button class="checkout-btn" bindtap="checkout">Proceed to Checkout →</button>
+    </view>
+  </block>
+
+  <!-- Empty Cart -->
+  <block wx:else>
+    <view class="empty-cart">
+      <image class="empty-icon" src="/images/empty-cart.png" mode="aspectFit"/>
+      <text class="empty-text">Your cart is empty</text>
+      <text class="empty-subtext">Browse categories and add products</text>
+      <button class="shop-btn" bindtap="goToCategories">Start Shopping</button>
+    </view>
+  </block>
+</view>

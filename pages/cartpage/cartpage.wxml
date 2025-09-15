@@ -1,0 +1,38 @@
+<!-- WXML Code -->
+<view class="chat-container">
+  <!-- Header -->
+  <view class="chat-header">
+    <text class="chat-title">Support Chat</text>
+  </view>
+
+  <!-- Messages Area -->
+  <scroll-view class="chat-messages" scroll-y="true" scroll-into-view="{{scrollToView}}">
+    <!-- Initial Messages -->
+    <view class="message incoming" id="msg0">
+      <text>Hello! How can I help you today?</text>
+      <view class="timestamp">Just now</view>
+    </view>
+    
+    <view class="message incoming" id="msg1">
+      <text>Welcome to our support chat! Please describe your issue and we will connect you with a merchant shortly.</text>
+      <view class="timestamp">Just now</view>
+    </view>
+    
+    <!-- Dynamic Messages -->
+    <view wx:for="{{messages}}" wx:key="index" class="message {{item.type}}" id="msg{{index+2}}">
+      <text>{{item.text}}</text>
+      <view class="timestamp">{{item.time}}</view>
+    </view>
+    
+    <!-- Typing Indicator -->
+    <view class="typing-indicator {{isTyping ? 'active' : ''}}">
+      <text>Merchant is typing...</text>
+    </view>
+  </scroll-view>
+
+  <!-- Input Area -->
+  <view class="chat-input-area">
+    <input class="chat-input" placeholder="Type a message..." value="{{inputValue}}" bindinput="onInput" bindconfirm="sendMessage" />
+    <button class="send-btn" bindtap="sendMessage">Send</button>
+  </view>
+</view>

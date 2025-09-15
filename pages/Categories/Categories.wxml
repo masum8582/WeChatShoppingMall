@@ -1,0 +1,134 @@
+<view class="categories-page modern-theme">
+
+<!-- Header with Search -->
+<view class="header glass-header">
+  <view class="search-bar">
+    <icon type="search" size="21" color="#888" class="search-icon" />
+    <input 
+      class="search-input" 
+      placeholder="Search products, brands..." 
+      placeholder-class="placeholder"
+      value="{{searchText}}"
+      bindinput="onSearchInput"
+      confirm-type="search"
+      bindconfirm="onSearchConfirm"
+    />
+    <text class="deals-text" bindtap="onDealsTap">🔥 Deals</text>
+    <view class="filter-btn" bindtap="showFilterModal" hover-class="filter-btn-hover">
+      <icon type="filter" size="24" color="#FF4B4B" />
+    </view>
+  </view>
+</view>
+
+<!-- Main Content -->
+<view class="categories-container">
+
+  <!-- Sidebar -->
+  <scroll-view class="sidebar" scroll-y="true" scroll-with-animation>
+    <block wx:for="{{categories}}" wx:key="id">
+      <view 
+        class="category-item {{currentCategory === item.id ? 'active' : ''}} hover-scale" 
+        bindtap="onCategorySelect" 
+        data-id="{{item.id}}"
+      >
+        <image src="{{item.icon}}" class="icon" mode="aspectFit" />
+        <text class="category-name">{{item.name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+
+  <!-- Products Grid -->
+  <scroll-view class="products" scroll-y="true" scroll-into-view="{{scrollToView}}">
+    
+    <!-- Category Header -->
+    <view class="category-header">
+      <text class="category-title">{{currentCategoryName}}</text>
+      <text class="product-count">{{filteredProducts.length}} products</text>
+    </view>
+
+    <!-- Products Grid -->
+    <view class="product-grid">
+      <block wx:for="{{filteredProducts}}" wx:key="id">
+        <view class="product-card hover-lift" bindtap="goToDetails" data-id="{{item.id}}">
+          
+          <view class="image-wrapper">
+            <image src="{{item.image}}" mode="aspectFill" class="product-image" />
+            
+            <!-- Price Badge -->
+            <view class="price-badge">¥{{item.price}}</view>
+            
+            <!-- Discount Badge -->
+            <view class="discount-badge" wx:if="{{item.discount}}">-{{item.discount}}%</view>
+          </view>
+
+          <view class="product-info">
+            <text class="product-name">{{item.name}}</text>
+            <text class="product-desc" wx:if="{{item.description}}">{{item.description}}</text>
+            
+            <!-- Rating -->
+            <view class="rating" wx:if="{{item.rating}}">
+              <image src="/images/star-filled.png" class="star-icon" wx:for="{{[1,2,3,4,5]}}" wx:key="index" style="opacity: {{index <= item.rating ? 1 : 0.3}};" />
+              <text class="rating-text">{{item.rating}}/5</text>
+            </view>
+
+            <!-- Footer -->
+            <view class="product-footer">
+              <text class="original-price" wx:if="{{item.originalPrice}}">¥{{item.originalPrice}}</text>
+              <button class="btn-add-cart ripple" bindtap="addToCart" data-id="{{item.id}}">＋ Add</button>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- Empty State -->
+    <view class="empty-state" wx:if="{{filteredProducts.length === 0}}">
+      <image src="/images/empty-luxury.png" class="empty-icon" />
+      <text class="empty-text">No matching products</text>
+      <text class="empty-subtext">Try adjusting your filters or search</text>
+    </view>
+
+  </scroll-view>
+</view>
+
+<!-- Filter Modal -->
+<view class="modal {{showModal ? 'show' : ''}} fade-in">
+  <view class="modal-overlay" bindtap="hideFilterModal"></view>
+  <view class="modal-content slide-up">
+    <view class="modal-header">
+      <text class="modal-title">Filter & Sort</text>
+      <view class="close-btn" bindtap="hideFilterModal">×</view>
+    </view>
+    
+    <view class="filter-section">
+      <text class="section-title">Max Price</text>
+      <slider value="{{priceRange}}" min="0" max="10000" step="50" bindchange="onPriceRangeChange" show-value block class="price-slider" activeColor="#FF4B4B" />
+      <view class="price-range">Up to ¥{{priceRange}}</view>
+    </view>
+
+    <view class="filter-section">
+      <text class="section-title">Sort By</text>
+      <radio-group bindchange="onSortChange">
+        <label class="radio-item" wx:for="{{sortOptions}}" wx:key="value">
+          <radio value="{{item.value}}" checked="{{sortBy === item.value}}" color="#FF4B4B" />
+          <text>{{item.label}}</text>
+        </label>
+      </radio-group>
+    </view>
+
+    <view class="modal-actions">
+      <button class="btn-reset" bindtap="resetFilters">Reset</button>
+      <button class="btn-apply" bindtap="applyFilters">Apply</button>
+    </view>
+  </view>
+</view>
+
+<!-- Loading Indicator -->
+<view class="loading-overlay" wx:if="{{isLoading}}">
+  <view class="loading-spinner pulse">
+    <image src="/images/loading-modern.gif" class="loading-icon" />
+    <text class="loading-text">Loading products...</text>
+  </view>
+</view>
+
+</view>

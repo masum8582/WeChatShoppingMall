@@ -1,0 +1,111 @@
+/* WXSS Code */
+/* Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+/* Header */
+.chat-header {
+  padding: 20rpx;
+  background-color: #FF4500;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #ddd;
+}
+
+/* Messages Area */
+.chat-messages {
+  flex: 1;
+  padding: 20rpx;
+  overflow-y: auto;
+}
+
+/* Messages */
+.message {
+  max-width: 70%;
+  padding: 16rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  font-size: 26rpx;
+  line-height: 1.4;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10rpx); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.incoming {
+  background-color: #fff;
+  align-self: flex-start;
+  box-shadow: 0 4rpx 10rpx rgba(0,0,0,0.1);
+  border-bottom-left-radius: 5rpx;
+}
+
+.outgoing {
+  background-color: #FF4500;
+  color: #fff;
+  align-self: flex-end;
+  box-shadow: 0 4rpx 10rpx rgba(0,0,0,0.15);
+  border-bottom-right-radius: 5rpx;
+}
+
+/* Input Area */
+.chat-input-area {
+  display: flex;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #ddd;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 14rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  margin-right: 10rpx;
+}
+
+.send-btn {
+  background-color: #FF4500;
+  color: #fff;
+  border: none;
+  border-radius: 30rpx;
+  padding: 10rpx 24rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 20rpx;
+  color: #999;
+  margin-top: 5rpx;
+  text-align: right;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: none;
+  background-color: #eee;
+  padding: 12rpx 16rpx;
+  border-radius: 18rpx;
+  align-self: flex-start;
+  margin-bottom: 15rpx;
+  font-style: italic;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.typing-indicator.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}

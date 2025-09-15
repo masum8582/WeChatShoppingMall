@@ -1,0 +1,117 @@
+/* Container */
+.container {
+  padding: 30rpx;
+  background-color: #f2f3f5;
+  min-height: 100vh;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Product Card */
+.product-info {
+  display: flex;
+  background-color: #fff;
+  border-radius: 24rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  align-items: center;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.product-image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 16rpx;
+  margin-right: 20rpx;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.product-price {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+/* Amount Section */
+.amount-section {
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.03);
+}
+
+.amount-section .label {
+  color: #666;
+}
+
+.amount-section .amount {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* Payment Method Section */
+.payment-method-section {
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 24rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.03);
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  margin-top: 15rpx;
+  padding: 12rpx 16rpx;
+  border-radius: 16rpx;
+  border: 1rpx solid #e0e0e0;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-option radio:checked + text,
+.radio-option:active {
+  border-color: #ff5722;
+  background-color: #fff2f0;
+  color: #ff5722;
+}
+
+/* Pay Button */
+.pay-button {
+  width: 100%;
+  background: linear-gradient(90deg, #ff5722, #ff7043);
+  color: #fff;
+  font-size: 34rpx;
+  padding: 20rpx 0;
+  border-radius: 24rpx;
+  text-align: center;
+  box-shadow: 0 8rpx 20rpx rgba(255, 87, 34, 0.3);
+  transition: all 0.2s ease;
+}
+
+.pay-button:active {
+  opacity: 0.9;
+  transform: translateY(2rpx);
+}
+
+/* Optional small text or tips */
+.tip-text {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 12rpx;
+  text-align: center;
+}

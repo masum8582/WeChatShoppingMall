@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="card">
+    <view class="title">Deals</view>
+    <view class="subtitle">Please login to continue</view>
+
+    <view class="form-group">
+      <input class="input" placeholder="Enter Username" bindinput="onUsernameInput" />
+      <input class="input" password="{{!showPassword}}" placeholder="Enter Password" bindinput="onPasswordInput" />
+    </view>
+
+    <view class="toggle-password" bindtap="togglePassword">
+      <text>{{ showPassword ? "Hide" : "Show" }} Password</text>
+    </view>
+
+    <button class="login-btn" bindtap="onLogin">Log In</button>
+
+    <view class="footer">
+      <text bindtap="onRegister" class="link">Register</text>
+      <text>|</text>
+      <text bindtap="onForgotPassword" class="link">Forgot Password?</text>
+    </view>
+  </view>
+
+  <button class="create-account-btn" bindtap="onRegister">Create New Account</button>
+
+  <view class="footer-links">
+    <text>About</text>
+    <text>Help</text>
+    <text>More</text>
+  </view>
+
+  <text class="footer-text">Weixing © 2022</text>
+</view>

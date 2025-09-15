@@ -1,0 +1,918 @@
+<!-- Search Bar -->
+<view class="search-bar">
+  <icon type="search" size="21" color="#999" class="search-icon" />
+  <input class="search-input" placeholder="Search here..." value="{{searchText}}" bindinput="onSearchInput" confirm-type="search" bindconfirm="onSearchConfirm" />
+  <text class="deals-text">Deals</text>
+</view>
+
+<!-- Banner -->
+<view class="banner">
+  <image class="banner-image" src="/pages/index/laptop.jpg" mode="aspectFill" />
+  <view class="overlay"></view>
+  <view class="banner-text">
+    <text class="title">Welcome to today's Deal!</text>
+    <text class="subtitle">Discover amazing offers every day</text>
+    <button class="shop-now-btn" bindtap="onShopNowTap">Shop Now</button>
+  </view>
+</view>
+
+
+
+
+
+<!-- Product Grid -->
+<view class="container">
+  <view class="product-grid">
+
+
+    <!-- Bag 1 -->
+    <navigator url="/pages/details/details?productId=1" class="product-card">
+      <image class="product-image" src="/pages/index/bag-1.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Elegant Ladies Handbag</text>
+        <view class="price-section">
+          <text class="current-price">¥ 356</text>
+          <text class="discount">-11%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(42)</text>
+        </view>
+      </view>
+    </navigator>
+
+    <!-- Bag 2 -->
+    <navigator url="/pages/details/details?productId=2" class="product-card">
+      <image class="product-image" src="/pages/index/bag-2.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Half Moon Laptop Bag for Men</text>
+        <view class="price-section">
+          <text class="current-price">¥ 430</text>
+          <text class="discount">-14%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(56)</text>
+        </view>
+      </view>
+    </navigator>
+
+    <!-- Bag 3 -->
+    <navigator url="/pages/details/details?productId=3" class="product-card">
+      <image class="product-image" src="/pages/index/bag-3.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Trendy Crossbody Ladies Bag</text>
+        <view class="price-section">
+          <text class="current-price">¥ 289</text>
+          <text class="discount">-23%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(98)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- Bag 4 -->
+      <navigator url="/pages/details/details?productId=4" class="product-card">
+      <image class="product-image" src="/pages/index/bag-4.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Premium Leather School Bag</text>
+        <view class="price-section">
+          <text class="current-price">¥ 243</text>
+          <text class="discount">-23%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(76)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- Bag 5 -->
+      <navigator url="/pages/details/details?productId=5" class="product-card">
+      <image class="product-image" src="/pages/index/bag-5.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Trendy Crossbody School Backpack</text>
+        <view class="price-section">
+          <text class="current-price">¥ 243</text>
+          <text class="discount">-15%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(24)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- Bag 6 -->
+      <navigator url="/pages/details/details?productId=6" class="product-card">
+      <image class="product-image" src="/pages/index/bag-6.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Stylish Designer School Bag</text>
+        <view class="price-section">
+          <text class="current-price">¥ 125</text>
+          <text class="discount">-19%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(65)</text>
+        </view>
+      </view>
+    </navigator>
+
+          <!-- Ball  1 -->
+          <navigator url="/pages/details/details?productId=7" class="product-card">
+      <image class="product-image" src="/pages/index/ball-1.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Premium Leather Football</text>
+        <view class="price-section">
+          <text class="current-price">¥25</text>
+          <text class="discount">-14%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(5)</text>
+        </view>
+      </view>
+    </navigator>
+
+          <!-- Ball 2 -->
+          <navigator url="/pages/details/details?productId=ball2" class="product-card">
+      <image class="product-image" src="/pages/index/ball-2.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Trendy Match-Ready Football</text>
+        <view class="price-section">
+          <text class="current-price">¥ 43</text>
+          <text class="discount">-10%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(12)</text>
+        </view>
+      </view>
+    </navigator>
+
+          <!-- Ball 3 -->
+          <navigator url="/pages/details/details?productId=ball3" class="product-card">
+      <image class="product-image" src="/pages/index/ball-3.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Stylish Designer Football</text>
+        <view class="price-section">
+          <text class="current-price">¥ 56</text>
+          <text class="discount">-29%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(9)</text>
+        </view>
+      </view>
+    </navigator>
+
+    <!-- cloth 1 -->
+    <navigator url="/pages/details/details?productId=cloth1" class="product-card">
+      <image class="product-image" src="/pages/index/cloth-4.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Hoodie with Pocket</text>
+        <view class="price-section">
+          <text class="current-price">¥ 37</text>
+          <text class="discount">-12%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(34)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- cloth 2 -->
+      <navigator url="/pages/details/details?productId=cloth2" class="product-card">
+      <image class="product-image" src="/pages/index/cloth-2.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Stylish shirt with Pocket</text>
+        <view class="price-section">
+          <text class="current-price">¥ 33</text>
+          <text class="discount">-22%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(45)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- cloth 3 -->
+      <navigator url="/pages/details/details?productId=cloth3" class="product-card">
+      <image class="product-image" src="/pages/index/cloth-3.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Stylish full shirt</text>
+        <view class="price-section">
+          <text class="current-price">¥ 65</text>
+          <text class="discount">-12%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(87)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- cloth 4 -->
+      <navigator url="/pages/details/details?productId=cloth4" class="product-card">
+      <image class="product-image" src="/pages/index/cloth-1.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Casual T-Shirt – Comfortable & Stylish</text>
+        <view class="price-section">
+          <text class="current-price">¥ 33</text>
+          <text class="discount">-17%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★</text>
+          <text class="review-count">(76)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- Football 1 -->
+      <navigator url="/pages/details/details?productId=football1" class="product-card">
+      <image class="product-image" src="/pages/index/football-1.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Premium Football</text>
+        <view class="price-section">
+          <text class="current-price">¥ 46</text>
+          <text class="discount">-17%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★★</text>
+          <text class="review-count">(54)</text>
+        </view>
+      </view>
+    </navigator>
+
+      <!-- football 2 -->
+      <navigator url="/pages/details/details?productId=football2" class="product-card">
+      <image class="product-image" src="/pages/index/football-2.jpg" mode="aspectFill" />
+      <view class="product-details">
+        <text class="product-title">Designer Football</text>
+        <view class="price-section">
+          <text class="current-price">¥ 57</text>
+          <text class="discount">-9%</text>
+        </view>
+        <view class="rating-section">
+          <text class="stars">★★★★</text>
+          <text class="review-count">(7)</text>
+        </view>
+      </view>
+    </navigator>
+
+    <!-- Headphone 1 -->
+<navigator url="/pages/details/details?productId=hd1" class="product-card">
+  <image class="product-image" src="/pages/index/headphone-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Wireless Bluetooth Headphones</text>
+    <view class="price-section">
+      <text class="current-price">¥ 79</text>
+      <text class="discount">-10%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★</text>
+      <text class="review-count">(12)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Headphone 2 -->
+<navigator url="/pages/details/details?productId=hd2" class="product-card">
+  <image class="product-image" src="/pages/index/headphone-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Noise-Cancelling Over-Ear Headphones</text>
+    <view class="price-section">
+      <text class="current-price">¥ 129</text>
+      <text class="discount">-15%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★★</text>
+      <text class="review-count">(34)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Headphone 3 -->
+<navigator url="/pages/details/details?productId=hd3" class="product-card">
+  <image class="product-image" src="/pages/index/headphone-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Foldable Travel Headphones</text>
+    <view class="price-section">
+      <text class="current-price">¥ 65</text>
+      <text class="discount">-8%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(8)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Headphone 4 -->
+<navigator url="/pages/details/details?productId=hd4" class="product-card">
+  <image class="product-image" src="/pages/index/headphone-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Gaming Headset with Mic</text>
+    <view class="price-section">
+      <text class="current-price">¥ 99</text>
+      <text class="discount">-12%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★</text>
+      <text class="review-count">(21)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Headphone 5 -->
+<navigator url="/pages/details/details?productId=hd5" class="product-card">
+  <image class="product-image" src="/pages/index/headphone-5.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Sports & Workout Headphones</text>
+    <view class="price-section">
+      <text class="current-price">¥ 49</text>
+      <text class="discount">-5%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★</text>
+      <text class="review-count">(15)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Headphone 6 -->
+<navigator url="/pages/details/details?productId=hd6" class="product-card">
+  <image class="product-image" src="/pages/index/headphone-6.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Premium Hi-Fi Headphones</text>
+    <view class="price-section">
+      <text class="current-price">¥ 149</text>
+      <text class="discount">-20%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★★</text>
+      <text class="review-count">(42)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Key 1 -->
+<navigator url="/pages/details/details?productId=k1" class="product-card">
+  <image class="product-image" src="/pages/index/key-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Mechanical Gaming Keyboard</text>
+    <view class="price-section">
+      <text class="current-price">¥ 129</text>
+      <text class="discount">-15%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★</text>
+      <text class="review-count">(28)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Key 2 -->
+<navigator url="/pages/details/details?productId=k2" class="product-card">
+  <image class="product-image" src="/pages/index/key-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Wireless Bluetooth Keyboard</text>
+    <view class="price-section">
+      <text class="current-price">¥ 97</text>
+      <text class="discount">-10%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★★</text>
+      <text class="review-count">(35)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Key 3 -->
+<navigator url="/pages/details/details?productId=k3" class="product-card">
+  <image class="product-image" src="/pages/index/key-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">RGB Backlit Keyboard</text>
+    <view class="price-section">
+      <text class="current-price">¥ 119</text>
+      <text class="discount">-12%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★</text>
+      <text class="review-count">(22)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Key 4 -->
+<navigator url="/pages/details/details?productId=k4" class="product-card">
+  <image class="product-image" src="/pages/index/key-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Slim Compact Keyboard</text>
+    <view class="price-section">
+      <text class="current-price">¥ 79</text>
+      <text class="discount">-8%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(18)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- LP 1 -->
+<navigator url="/pages/details/details?productId=lp1" class="product-card">
+  <image class="product-image" src="/pages/index/laptop-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Slim Ultrabook Laptop</text>
+    <view class="price-section">
+      <text class="current-price">¥ 4999</text>
+      <text class="discount">-10%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★</text>
+      <text class="review-count">(23)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- LP 2 -->
+<navigator url="/pages/details/details?productId=lp2" class="product-card">
+  <image class="product-image" src="/pages/index/laptop-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Gaming Laptop Pro</text>
+    <view class="price-section">
+      <text class="current-price">¥ 6999</text>
+      <text class="discount">-12%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★★</text>
+      <text class="review-count">(45)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- LP 3 -->
+<navigator url="/pages/details/details?productId=lp3" class="product-card">
+  <image class="product-image" src="/pages/index/laptop-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Business Notebook</text>
+    <view class="price-section">
+      <text class="current-price">¥ 4599</text>
+      <text class="discount">-8%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★</text>
+      <text class="review-count">(31)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- LP 4 -->
+<navigator url="/pages/details/details?productId=lp4" class="product-card">
+  <image class="product-image" src="/pages/index/laptop-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Convertible 2-in-1 Laptop</text>
+    <view class="price-section">
+      <text class="current-price">¥ 5299</text>
+      <text class="discount">-9%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(27)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- LP 5 -->
+<navigator url="/pages/details/details?productId=lp5" class="product-card">
+  <image class="product-image" src="/pages/index/laptop-5.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">High-Performance Laptop</text>
+    <view class="price-section">
+      <text class="current-price">¥ 6399</text>
+      <text class="discount">-11%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★★★</text>
+      <text class="review-count">(38)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- LP 6 -->
+<navigator url="/pages/details/details?productId=lp6" class="product-card">
+  <image class="product-image" src="/pages/index/laptop-6.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Everyday Use Laptop</text>
+    <view class="price-section">
+      <text class="current-price">¥ 219</text>
+      <text class="discount">-18%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MK 1 -->
+<navigator url="/pages/details/details?productId=mk1" class="product-card">
+  <image class="product-image" src="/pages/index/mk-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Natural Glow Highlighter</text>
+    <view class="price-section">
+      <text class="current-price">¥ 179</text>
+      <text class="discount">-12%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MK 2 -->
+<navigator url="/pages/details/details?productId=mk2" class="product-card">
+  <image class="product-image" src="/pages/index/mk-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Smokey Eyeshadow Palette</text>
+    <view class="price-section">
+      <text class="current-price">¥ 249</text>
+      <text class="discount">-22%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MK 3 -->
+<navigator url="/pages/details/details?productId=mk3" class="product-card">
+  <image class="product-image" src="/pages/index/mk-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Hydrating Foundation Cream</text>
+    <view class="price-section">
+      <text class="current-price">¥ 159</text>
+      <text class="discount">-15%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MK 4 -->
+<navigator url="/pages/details/details?productId=mk4" class="product-card">
+  <image class="product-image" src="/pages/index/mk-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Luxury Lipstick Collection</text>
+    <view class="price-section">
+      <text class="current-price">¥ 2599</text>
+      <text class="discount">-10%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MN 1 -->
+<navigator url="/pages/details/details?productId=mn1" class="product-card">
+  <image class="product-image" src="/pages/index/mn-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">UltraWide Curved Monitor 34</text>
+    <view class="price-section">
+      <text class="current-price">¥ 1999</text>
+      <text class="discount">-14%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MN 2 -->
+<navigator url="/pages/details/details?productId=mn2" class="product-card">
+  <image class="product-image" src="/pages/index/mn-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">4K UHD Professional Monitor 27</text>
+    <view class="price-section">
+      <text class="current-price">¥ 3299</text>
+      <text class="discount">-17%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MN 3 -->
+<navigator url="/pages/details/details?productId=mn3" class="product-card">
+  <image class="product-image" src="/pages/index/mn-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Gaming Monitor 240Hz 32</text>
+    <view class="price-section">
+      <text class="current-price">¥ 1299</text>
+      <text class="discount">-8%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MN 4 -->
+<navigator url="/pages/details/details?productId=mn4" class="product-card">
+  <image class="product-image" src="/pages/index/mn-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Portable USB-C Monitor 15.6</text>
+    <view class="price-section">
+      <text class="current-price">¥ 199</text>
+      <text class="discount">-25%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MS 1 -->
+<navigator url="/pages/details/details?productId=ms1" class="product-card">
+  <image class="product-image" src="/pages/index/ms-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Wireless Optical Mouse</text>
+    <view class="price-section">
+      <text class="current-price">¥ 249</text>
+      <text class="discount">-18%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MS 2 -->
+<navigator url="/pages/details/details?productId=ms2" class="product-card">
+  <image class="product-image" src="/pages/index/ms-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Gaming RGB Mouse</text>
+    <view class="price-section">
+      <text class="current-price">¥ 149</text>
+      <text class="discount">-10%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- MS 3 -->
+<navigator url="/pages/details/details?productId=ms3" class="product-card">
+  <image class="product-image" src="/pages/index/ms-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Ergonomic Vertical Mouse</text>
+    <view class="price-section">
+      <text class="current-price">¥ 179</text>
+      <text class="discount">-16%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- Ms 4 -->
+<navigator url="/pages/details/details?productId=ms4" class="product-card">
+  <image class="product-image" src="/pages/index/ms-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Bluetooth Travel Mouse</text>
+    <view class="price-section">
+      <text class="current-price">¥ 3199</text>
+      <text class="discount">-9%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- PH 1 -->
+<navigator url="/pages/details/details?productId=ph1" class="product-card">
+  <image class="product-image" src="/pages/index/ph-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">OnePlus 12</text>
+    <view class="price-section">
+      <text class="current-price">¥ 4999</text>
+      <text class="discount">-6%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- PH 2 -->
+<navigator url="/pages/details/details?productId=ph2" class="product-card">
+  <image class="product-image" src="/pages/index/ph-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">iPhone 14</text>
+    <view class="price-section">
+      <text class="current-price">¥ 6999</text>
+      <text class="discount">-12%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- PH 3 -->
+<navigator url="/pages/details/details?productId=ph3" class="product-card">
+  <image class="product-image" src="/pages/index/ph-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">iPhone 15 Pro</text>
+    <view class="price-section">
+      <text class="current-price">¥ 2599</text>
+      <text class="discount">-15%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- PH 4 -->
+<navigator url="/pages/details/details?productId=ph4" class="product-card">
+  <image class="product-image" src="/pages/index/ph-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Oppo s13 pro</text>
+    <view class="price-section">
+      <text class="current-price">¥ 599</text>
+      <text class="discount">-20%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- SO 1 -->
+<navigator url="/pages/details/details?productId=so1" class="product-card">
+  <image class="product-image" src="/pages/index/so-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Nike Air Zoom Pegasus</text>
+    <view class="price-section">
+      <text class="current-price">¥ 799</text>
+      <text class="discount">-18%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- SO 2 -->
+<navigator url="/pages/details/details?productId=so2" class="product-card">
+  <image class="product-image" src="/pages/index/so-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Adidas Ultraboost</text>
+    <view class="price-section">
+      <text class="current-price">¥ 549</text>
+      <text class="discount">-10%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- SO 3 -->
+<navigator url="/pages/details/details?productId=so3" class="product-card">
+  <image class="product-image" src="/pages/index/so-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Reebok Classic Leather</text>
+    <view class="price-section">
+      <text class="current-price">¥ 499</text>
+      <text class="discount">-12%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- SO 4 -->
+<navigator url="/pages/details/details?productId=so4" class="product-card">
+  <image class="product-image" src="/pages/index/so-4.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Classic Leather</text>
+    <view class="price-section">
+      <text class="current-price">¥ 1299</text>
+      <text class="discount">-19%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- WT 1 -->
+<navigator url="/pages/details/details?productId=wt1" class="product-card">
+  <image class="product-image" src="/pages/index/wt-1.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Seiko Mechanical Watch</text>
+    <view class="price-section">
+      <text class="current-price">¥ 2599</text>
+      <text class="discount">-11%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- WT 2 -->
+<navigator url="/pages/details/details?productId=wt2" class="product-card">
+  <image class="product-image" src="/pages/index/wt-2.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">Apple Watch Series 9</text>
+    <view class="price-section">
+      <text class="current-price">¥ 1699</text>
+      <text class="discount">-8%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+<!-- WT 3 -->
+<navigator url="/pages/details/details?productId=wt3" class="product-card">
+  <image class="product-image" src="/pages/index/wt-3.jpg" mode="aspectFill" />
+  <view class="product-details">
+    <text class="product-title">ossil Gen 6</text>
+    <view class="price-section">
+      <text class="current-price">¥ 3999</text>
+      <text class="discount">-7%</text>
+    </view>
+    <view class="rating-section">
+      <text class="stars">★★★</text>
+      <text class="review-count">(19)</text>
+    </view>
+  </view>
+</navigator>
+
+  </view>
+</view>
+
+
+<!-- Bottom Navigation -->
+<view class="bottom-nav">
+  <view class="nav-item" bindtap="goToHomePage">
+    <image src="/pages/index/home.png" class="nav-icon"/>
+    <text class="nav-label">Home</text>
+  </view>
+  <view class="nav-item" bindtap="goToCategories">
+    <image src="/pages/index/categories.png" class="nav-icon" />
+    <text class="nav-label">Categories</text>
+  </view>
+  <view class="nav-item" bindtap="goTocartpage">
+    <image src="/pages/index/message.png" class="nav-icon" />
+    <text class="nav-label">Chat</text>
+  </view>
+  <view class="nav-item" bindtap="goTocart">
+    <image src="/pages/index/cart.png" class="nav-icon" />
+    <text class="nav-label">Cart</text>
+  </view>
+  <view class="nav-item" bindtap="goToprofilepage">
+    <image src="/pages/index/profile.png" class="nav-icon" />
+    <text class="nav-label">Profile</text>
+  </view>
+</view>
